@@ -2,36 +2,34 @@
 import "bootstrap";
 import "./style.css";
 
-window.onload = function() {
+window.onload = () => {
   //write your code here
+  document.querySelector(".number").innerHTML = generateRandomNumber();
+  document.querySelector(".top-suit").innerHTML = generateRandomSuit();
+};
 
-  function mazo() {
-    const suits = ["hearts", "spades", "clubs", "diamonds"];
-    const numbers = [
-      "A",
-      "2",
-      "3",
-      "4",
-      "5",
-      "6",
-      "7",
-      "8",
-      "9",
-      "10 ",
-      "J",
-      "Q",
-      "K"
-    ];
-    const cards = [];
+let generateRandomNumber = () => {
+  let numbers = [
+    "A",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "J",
+    "Q",
+    "K"
+  ];
+  let indexNumbers = Math.floor(Math.random() * numbers.length);
+  return numbers[indexNumbers];
+};
 
-    for (let s = 0; s < suits.length; s++) {
-      for (let n = 0; n < suits.length; n++) {
-        const suit = suits[s];
-        const number = numbers[n];
-        cards.push({ number, suit });
-      }
-    }
-    this.console.log(cards);
-  }
-  return mazo;
+let generateRandomSuit = () => {
+  let suits = ["heart", "diamond", "spade", "club"];
+  let indexSuits = Math.floor(Math.random() * suits.length);
+  return suits[indexSuits];
 };
