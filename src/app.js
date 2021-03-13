@@ -5,7 +5,7 @@ import "./style.css";
 window.onload = () => {
   //write your code here
   document.querySelector(".number").innerHTML = generateRandomNumber();
-  document.querySelector(".top-suit").innerHTML = generateRandomSuit();
+  document.querySelector(".top-suit").classList.add(generateRandomSuit());
 };
 
 let generateRandomNumber = () => {
