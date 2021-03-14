@@ -23,6 +23,7 @@ body {
   left: 0;
   font-size: 75px;
 }
+
 .bottom-suit {
   position: absolute;
   bottom: 0;
@@ -31,4 +32,21 @@ body {
 }
 .number {
   font-size: 75px;
+}
+
+.spade::before {
+  content: "\2660";
+}
+
+.heart::before {
+  content: "\2665";
+  color: red;
+}
+
+.club::before {
+  content: "\2663";
+}
+.diamond::before {
+  content: "\2666";
+  color: red;
 }
