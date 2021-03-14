@@ -17,36 +17,41 @@ body {
   position: relative;
   text-align: center;
 }
-.top-suit {
+.card::before {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 10px;
   font-size: 75px;
 }
 
-.bottom-suit {
+.card::after {
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: 10px;
   font-size: 75px;
+  transform: rotate(180 degrees);
 }
 .number {
   font-size: 75px;
 }
 
-.spade::before {
+.spade::before,
+.spade::after {
   content: "\2660";
 }
 
-.heart::before {
+.heart::before,
+.heart::after {
   content: "\2665";
   color: red;
 }
 
-.club::before {
+.club::before,
+.club::after {
   content: "\2663";
 }
-.diamond::before {
+.diamond::before,
+.diamond::after {
   content: "\2666";
   color: red;
 }
